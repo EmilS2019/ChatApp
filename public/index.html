@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emil's Chatapp</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/6.4.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/6.4.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/6.4.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/6.4.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/6.4.2/firebase-firestore.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <link rel="stylesheet" type="text/css" href="app.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style media="screen"></style>
+  </head>
+  <body>
+    <!--<button onclick="googleLogin()">
+      Login with Google
+    </button>-->
+    <main id="main">
+      <h1 id="messages" class="myScrollbar"></h1>
+      <form
+        class="chat"
+        onsubmit="onSubmitClicked(event)"
+        id="chat"
+        autocomplete="off"
+      >
+        <h2>Name:<input type="text" id="name" value="" /></h2>
+        <div id="dialogueBox" class="dialogueBox">
+          Name or Message cannot be empty
+        </div>
+        <h2>
+          Message:<input type="text" id="message" value="" />
+
+          <button type="submit" value="send" class="btn btn-primary">
+            Send
+          </button>
+        </h2>
+      </form>
+    </main>
+
+    <footer id="footer">
+      © Copyright Emil 2019
+    </footer>
+
+    <!--My own scripts-->
+    <script src="app.js" type="module"></script>
+    <script src="onSubmit.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-app.js"></script>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyBb-YvQCzg8vBDaRhQYez4f5Kq1-3omlKA",
+        authDomain: "my-project-1561192733442.firebaseapp.com",
+        databaseURL: "https://my-project-1561192733442.firebaseio.com",
+        projectId: "my-project-1561192733442",
+        storageBucket: "",
+        messagingSenderId: "765231506934",
+        appId: "1:765231506934:web:91f9e8bcbc54e9df"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  </body>
+</html>
